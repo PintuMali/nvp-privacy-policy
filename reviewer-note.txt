@@ -54,4 +54,4 @@ ENCRYPTION:
 - App password = local SQLCipher DB encryption only.
 - ITSAppUsesNonExemptEncryption = false. No ERN required.
 
-PRIVACY POLICY: https://YOUR-GITHUB-USERNAME.github.io/nvp-privacy-policy/
+PRIVACY POLICY: https://pintumali.github.io/nvp-privacy-policy/
