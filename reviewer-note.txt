@@ -1,0 +1,42 @@
+REVIEWER ACCESS — NVP Accounting (com.nvp.accounting)
+
+FIRST-RUN FLOW:
+1. Launch the app.
+2. Tap "Get Started".
+3. On the "Create Application Password" screen, enter any password of 6+ characters
+   (e.g. "review123") and confirm it. Tap "Create".
+4. On the next screen, enter any name and email (e.g. "Reviewer" / "reviewer@test.com")
+   and tap Register. You are now inside the app.
+
+TO POPULATE DEMO DATA (recommended for full review):
+- Tap the hamburger menu (top-left) → any module.
+- Advertisements module: tap "+ Add Entry" to create income/expense records.
+  Use "Export PDF" or "Export CSV" to test file export → saved to Files app →
+  NVP Accounting → Documents/Exports/.
+- Double Entry module: create ledger accounts, post journal entries, view
+  Trial Balance / P&L / Balance Sheet reports.
+
+IMPORT EXISTING DATABASE (optional):
+- On the home screen, tap "Import Existing Database".
+- Select a .db file from the iOS Files app. The app copies it locally.
+
+LOGOUT / RESET:
+- Menu → Logout. Clears the session. Re-launch → Get Started → new password.
+
+SIMULATOR LIMITATIONS (not bugs):
+- PDF Share sheet may appear empty on simulator — works correctly on physical device.
+- File picker (Import DB) works best on physical device.
+
+ENCRYPTION: App password is local UI access control only. SQLCipher encrypts the
+on-device DB. ITSAppUsesNonExemptEncryption = false. No ERN required.
+
+PRIVACY POLICY: https://YOUR-GITHUB-USERNAME.github.io/nvp-privacy-policy/
+
+NETWORK NOTE:
+The app makes no background network requests and collects no data.
+When a user generates a PDF from an imported HTML template that references
+Google Fonts (a standard web font CDN), the app fetches only the font files
+needed to render that template correctly. No user data is sent. This is
+equivalent to a browser loading a web page the user opened — it is
+user-initiated, one-directional, and contains no personal information.
+
