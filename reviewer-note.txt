@@ -1,57 +1,125 @@
 REVIEWER ACCESS — NVP Accounting (com.pintoomali.nvpaccounting)
+================================================================
 
-FIRST-RUN FLOW:
+WHAT THIS APP IS
+- An offline, single-purpose business accounting app (Single-entry,
+  Double-entry, GST, Inventory, Reports, and a Marketing/flyer studio).
+- 100% on-device. No servers, no user accounts on our side, no cloud sync,
+  no analytics, no ads, no third-party login. All data lives in an encrypted
+  local SQLite database (SQLCipher / AES-256).
+
+--------------------------------------------------------------------
+FIRST-RUN FLOW
+--------------------------------------------------------------------
 1. Launch the app.
 2. Tap "Get Started".
-3. On "Create Application Password" enter any password of 6+ characters
-   (e.g. "review123"), confirm it, tap "Create".
-   This encrypts the local database on this device.
-4. On the Login screen, use any of the 3 pre-seeded test accounts below.
-   (Accounts are created automatically on first launch — no import needed.)
+3. On "Create Application Password", enter any password of 6+ characters
+   (e.g. "review123"), confirm it, and tap "Create".
+   -> This generates and encrypts the local database on this device.
+4. On the Login screen, sign in with any of the 3 pre-seeded TEST ACCOUNTS
+   below. (They are created automatically on first launch — no import or
+   network needed.)
 
-TEST ACCOUNTS:
-
-  Account 1 — Single Entry Accounting
+--------------------------------------------------------------------
+TEST ACCOUNTS (seeded automatically, verified in source)
+--------------------------------------------------------------------
+  Account 1 — Single-Entry Accounting
   Email:    test1@nvp.com
   Password: test@12345
   Modules:  Accounts, Transactions, GST Management, Reports, Marketing
 
-  Account 2 — Double Entry Accounting
+  Account 2 — Double-Entry Accounting
   Email:    test2@nvp.com
   Password: test@12345
   Modules:  Ledgers, Journals, Reports (Trial Balance / P&L / Balance Sheet),
             Marketing
 
-  Account 3 — Double Entry + Inventory
+  Account 3 — Double-Entry + Inventory
   Email:    test3@nvp.com
   Password: deinvtest@12345123
   Modules:  Ledgers, Journals, Inventory, Reports, Marketing
 
-All accounts expire 2026-10-30 — well beyond any review window.
+  NOTE: These are LOCAL accounts stored inside the encrypted on-device
+  database — they are NOT server/cloud accounts. Nothing is transmitted when
+  you log in. All three accounts are valid until 2026-10-30, well beyond any
+  review window.
 
-EXPORTS (PDF / CSV):
-- Any module → Export button → Open / Download / Share
-- Files saved to: Files app → NVP Accounting → Documents/Exports/
+--------------------------------------------------------------------
+LOGOUT / SWITCH ACCOUNTS
+--------------------------------------------------------------------
+- Menu (top-left) -> Logout -> re-enter the app password -> Login with a
+  different account email. All three test accounts share the same on-device
+  encrypted database, unlocked by the single app password you created.
 
-LOGOUT / SWITCH ACCOUNTS:
-- Menu (top-left) → Logout → re-enter app password → Login with
-  a different account email
+--------------------------------------------------------------------
+EXPORTS (PDF / CSV)
+--------------------------------------------------------------------
+- Any module -> Export button -> Open / Download / Share.
+- Files are saved to: Files app -> "NVP Accounting" -> Documents/Exports/
+- On Simulator the PDF Share sheet may appear empty; it works on a physical
+  device (uses UIActivityViewController).
 
-"IMPORT EXISTING DATABASE" BUTTON:
-- Visible on home screen (iOS only). This is for existing customers
-  transferring their data from the desktop version. Reviewers do not
-  need to use it — the 3 test accounts above are sufficient.
+--------------------------------------------------------------------
+MARKETING MODULE — OPTIONAL IMAGE (Camera / Photos)
+--------------------------------------------------------------------
+- The "Marketing" (Advertisement) module lets the user design a product
+  flyer. On the "Lot list" flyer there is an OPTIONAL "Hero image" field.
+- Tapping it opens the standard iOS photo picker (and, if selected, the
+  camera). Any chosen image is embedded ONLY into the user's local flyer /
+  exported PDF. It is never uploaded anywhere.
+- This is the ONLY place the app touches Photos/Camera, it is entirely
+  optional, and skipping it does not affect any other feature.
 
-SIMULATOR NOTE:
-- PDF Share sheet may appear empty on simulator — works on physical device.
+--------------------------------------------------------------------
+FORGOT PASSWORD / RECOVERY (optional, offline, user-initiated)
+--------------------------------------------------------------------
+- The Login screen has a "Forgot password" path. Reviewers do NOT need to
+  use it.
+- Because the app stores NO copy of the password and has no server, recovery
+  is optional and manual: the app shows an on-device Install ID + a sealed
+  recovery blob that a user may CHOOSE to email to support. The app never
+  transmits anything on its own. This is here only so a real customer who
+  forgets their password can regain access to their own local data.
 
-NETWORK:
-- No background network requests, no user data transmitted.
-- Google Fonts may be fetched when generating a PDF from a user-imported
-  HTML template — user-initiated only, no personal data sent.
+--------------------------------------------------------------------
+"IMPORT EXISTING DATABASE" BUTTON (iOS)
+--------------------------------------------------------------------
+- Visible on the home screen. This is for existing customers migrating their
+  data from the desktop version via the Files app. Reviewers do NOT need to
+  use it — the 3 seeded test accounts above are sufficient.
 
-ENCRYPTION:
-- App password = local SQLCipher DB encryption only.
-- ITSAppUsesNonExemptEncryption = false. No ERN required.
+--------------------------------------------------------------------
+ACCOUNT / DATA DELETION
+--------------------------------------------------------------------
+- Accounts are local only (no server account is ever created). A user can
+  delete individual users from the in-app User List, and can remove ALL app
+  data at any time by deleting the app (which removes its sandboxed database)
+  or deleting the database file from the Files app. Nothing is retained by us
+  because nothing is ever collected.
 
-PRIVACY POLICY: https://pintumali.github.io/nvp-privacy-policy/
+--------------------------------------------------------------------
+NETWORK
+--------------------------------------------------------------------
+- No background network requests; no user data is transmitted.
+- The only possible outbound request is fetching web-font files (e.g. Google
+  Fonts) when a user generates a PDF from an imported HTML flyer template that
+  references those fonts. It is user-initiated and contains no personal data.
+
+--------------------------------------------------------------------
+ENCRYPTION / EXPORT COMPLIANCE
+--------------------------------------------------------------------
+- The app password encrypts the local SQLCipher database on-device only
+  (AES-256; Argon2id key derivation). It never leaves the device.
+- Only standard, published algorithms are used, solely to protect the user's
+  own data at rest. ITSAppUsesNonExemptEncryption = false; no ERN required.
+
+--------------------------------------------------------------------
+PRIVACY
+--------------------------------------------------------------------
+- App Privacy: "Data Not Collected."
+- Privacy Policy: https://pintumali.github.io/nvp-privacy-policy/
+
+--------------------------------------------------------------------
+SUPPORT
+--------------------------------------------------------------------
+- Contact: pintoomali1@gmail.com
