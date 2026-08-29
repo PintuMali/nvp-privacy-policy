@@ -1,42 +1,57 @@
-REVIEWER ACCESS — NVP Accounting (com.nvp.accounting)
+REVIEWER ACCESS — NVP Accounting (com.pintoomali.nvpaccounting)
 
 FIRST-RUN FLOW:
 1. Launch the app.
 2. Tap "Get Started".
-3. On the "Create Application Password" screen, enter any password of 6+ characters
-   (e.g. "review123") and confirm it. Tap "Create".
-4. On the next screen, enter any name and email (e.g. "Reviewer" / "reviewer@test.com")
-   and tap Register. You are now inside the app.
+3. On "Create Application Password" enter any password of 6+ characters
+   (e.g. "review123"), confirm it, tap "Create".
+   This encrypts the local database on this device.
+4. On the Login screen, use any of the 3 pre-seeded test accounts below.
+   (Accounts are created automatically on first launch — no import needed.)
 
-TO POPULATE DEMO DATA (recommended for full review):
-- Tap the hamburger menu (top-left) → any module.
-- Advertisements module: tap "+ Add Entry" to create income/expense records.
-  Use "Export PDF" or "Export CSV" to test file export → saved to Files app →
-  NVP Accounting → Documents/Exports/.
-- Double Entry module: create ledger accounts, post journal entries, view
-  Trial Balance / P&L / Balance Sheet reports.
+TEST ACCOUNTS:
 
-IMPORT EXISTING DATABASE (optional):
-- On the home screen, tap "Import Existing Database".
-- Select a .db file from the iOS Files app. The app copies it locally.
+  Account 1 — Single Entry Accounting
+  Email:    test1@nvp.com
+  Password: test@12345
+  Modules:  Accounts, Transactions, GST Management, Reports, Marketing
 
-LOGOUT / RESET:
-- Menu → Logout. Clears the session. Re-launch → Get Started → new password.
+  Account 2 — Double Entry Accounting
+  Email:    test2@nvp.com
+  Password: test@12345
+  Modules:  Ledgers, Journals, Reports (Trial Balance / P&L / Balance Sheet),
+            Marketing
 
-SIMULATOR LIMITATIONS (not bugs):
-- PDF Share sheet may appear empty on simulator — works correctly on physical device.
-- File picker (Import DB) works best on physical device.
+  Account 3 — Double Entry + Inventory
+  Email:    test3@nvp.com
+  Password: deinvtest@12345123
+  Modules:  Ledgers, Journals, Inventory, Reports, Marketing
 
-ENCRYPTION: App password is local UI access control only. SQLCipher encrypts the
-on-device DB. ITSAppUsesNonExemptEncryption = false. No ERN required.
+All accounts expire 2026-10-30 — well beyond any review window.
+
+EXPORTS (PDF / CSV):
+- Any module → Export button → Open / Download / Share
+- Files saved to: Files app → NVP Accounting → Documents/Exports/
+
+LOGOUT / SWITCH ACCOUNTS:
+- Menu (top-left) → Logout → re-enter app password → Login with
+  a different account email
+
+"IMPORT EXISTING DATABASE" BUTTON:
+- Visible on home screen (iOS only). This is for existing customers
+  transferring their data from the desktop version. Reviewers do not
+  need to use it — the 3 test accounts above are sufficient.
+
+SIMULATOR NOTE:
+- PDF Share sheet may appear empty on simulator — works on physical device.
+
+NETWORK:
+- No background network requests, no user data transmitted.
+- Google Fonts may be fetched when generating a PDF from a user-imported
+  HTML template — user-initiated only, no personal data sent.
+
+ENCRYPTION:
+- App password = local SQLCipher DB encryption only.
+- ITSAppUsesNonExemptEncryption = false. No ERN required.
 
 PRIVACY POLICY: https://YOUR-GITHUB-USERNAME.github.io/nvp-privacy-policy/
-
-NETWORK NOTE:
-The app makes no background network requests and collects no data.
-When a user generates a PDF from an imported HTML template that references
-Google Fonts (a standard web font CDN), the app fetches only the font files
-needed to render that template correctly. No user data is sent. This is
-equivalent to a browser loading a web page the user opened — it is
-user-initiated, one-directional, and contains no personal information.
-
