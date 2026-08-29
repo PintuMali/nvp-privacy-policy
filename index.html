@@ -153,13 +153,17 @@
 
 <h2>File Access</h2>
 <p>
-  The app reads and writes files only within its own sandboxed <code>Documents/</code> directory.
-  You may optionally import an existing database file via the system file picker — this file is
-copied locally into the app sandbox and the original is not modified or transmitted.
-Exported PDF and CSV files are saved to <code>Documents/Exports/</code> (mobile) or a
-user-selected folder (desktop) and can be shared at your discretion.
-
+  The app reads and writes files only within its own sandboxed
+  <code>Documents/</code> directory. You may optionally import an existing
+  database file via the system file picker — this file is copied locally
+  into the app sandbox for use. On logout, any changes made during the
+  session are written back to the original file so your data stays current
+  across sessions. No data is transmitted over the internet at any point.
+  Exported PDF and CSV files are saved to <code>Documents/Exports/</code>
+  (mobile) or a user-selected folder (desktop) and can be shared at your
+  discretion.
 </p>
+
 
 <h2>App Password / Authentication</h2>
 <p>
