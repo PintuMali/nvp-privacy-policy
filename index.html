@@ -105,12 +105,13 @@
 <p>
   NVP Accounting does <strong>not collect, transmit, store remotely, or share any personal data</strong>.
   All data you enter — accounts, transactions, journal entries, GST records, and exports — stays
-  exclusively on your device. There are no servers, no accounts, no cloud sync, and no analytics.
+  exclusively on your device. There are no servers, no user accounts on our side, no cloud sync,
+  and no analytics.
 </p>
 
 <h2>Data We Do Not Collect</h2>
 <ul>
-  <li>No account registration, email address, or sign-in credentials</li>
+  <li>No account registration, email address, or sign-in credentials sent to us</li>
   <li>No names, phone numbers, or contact information</li>
   <li>No financial figures, business data, or transaction records</li>
   <li>No device identifiers, advertising IDs, or fingerprints</li>
@@ -124,17 +125,18 @@
   All accounting records and exported files (PDF/CSV) are stored in your device's sandboxed
   <code>Documents/</code> directory. Nothing is uploaded to any server at any time.
 </p>
-  <h2>Platforms</h2>
+
+<h2>Platforms</h2>
 <p>
   NVP Accounting is available on iOS, Android, Windows, and macOS. On all
   platforms, all data is stored locally in an encrypted SQLite database
-  (SQLCipher). There is no server, no cloud sync, and no cross-device data
-  transfer initiated by the app. Users may manually transfer their database
-  file between devices using the OS file system — the app does not do this
-  automatically.
+  (SQLCipher, AES-256). There is no server, no cloud sync, and no cross-device
+  data transfer initiated by the app. Users may manually transfer their
+  database file between devices using the OS file system — the app does not do
+  this automatically.
 </p>
 
-  <h2>Network</h2>
+<h2>Network</h2>
 <p>
   NVP Accounting makes no background network requests and transmits no user
   data over the internet. The app has no server, no cloud sync, and no
@@ -148,8 +150,10 @@
   one-directional, and contains no personal data — functionally identical
   to a browser loading a font for a web page the user opened.
 </p>
-
-
+<p>
+  The app also displays a link to this Privacy Policy. Tapping it opens the
+  page in your device's default web browser; no data is sent by the app.
+</p>
 
 <h2>File Access</h2>
 <p>
@@ -164,13 +168,50 @@
   discretion.
 </p>
 
-
-<h2>App Password / Authentication</h2>
+<h2>Camera &amp; Photos (Optional)</h2>
 <p>
-  The app uses a locally-stored password to encrypt the on-device SQLite database (SQLCipher).
-  This password never leaves your device. It is not stored on any server and cannot be
-  recovered by us. <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code> —
-  no Export Compliance (ERN) is required.
+  In the Marketing / Advertisement module you may optionally attach an image
+  to a product advertisement you create. When you tap "Add image", your
+  operating system's standard photo picker (and, on some platforms, the
+  camera) is presented so you can choose or capture a picture. Any image you
+  select is embedded only in your local advertisement and its exported
+  PDF — it stays on your device and is never uploaded to us or any third
+  party. If you never attach an image, no photo or camera access occurs. You
+  can decline the permission at any time; the rest of the app is unaffected.
+</p>
+
+<h2>App Password &amp; Authentication</h2>
+<p>
+  NVP Accounting protects your data with a password that you choose. The
+  on-device database is encrypted at rest with SQLCipher (AES-256). Your
+  password is never stored anywhere: it is run through Argon2id to derive a
+  key that wraps a random database key using AES-256-GCM. Your password itself
+  never leaves your device and is never transmitted to, or stored on, any
+  server. We have no ability to read your password.
+</p>
+
+<h2>Password Recovery (Optional, User-Initiated)</h2>
+<p>
+  Because we keep no copy of your password, we cannot silently reset it or
+  access your data. For emergencies only, the app can generate an
+  <strong>on-device recovery file</strong> (a copy of your database key sealed
+  to our offline recovery key). This file remains on your device and is
+  <strong>never transmitted automatically</strong>. If — and only if — you
+  choose to email it to our support address to request an assisted reset, our
+  offline tool can use it to help you regain access to your own data. We never
+  receive this file otherwise, and we cannot decrypt your database without you
+  voluntarily providing it. You may decline recovery entirely; in that case,
+  if you lose your password your data cannot be recovered by anyone, including
+  us.
+</p>
+
+<h2>Export Compliance (Encryption)</h2>
+<p>
+  NVP Accounting uses only standard, published encryption algorithms
+  (AES-256, Argon2id, X25519) solely to protect your own data at rest on your
+  own device. It does not implement proprietary or non-standard cryptography.
+  Accordingly, <code>ITSAppUsesNonExemptEncryption</code> is set to
+  <code>false</code>.
 </p>
 
 <h2>System APIs Accessed (Required Reasons)</h2>
@@ -201,7 +242,9 @@
 <h2>Third-Party Services</h2>
 <p>
   NVP Accounting does not integrate any third-party analytics, advertising, crash reporting,
-  or data collection services. No data is shared with any third party.
+  or data collection services. No data is shared with any third party. The "Advertisement"
+  feature in the app is a tool for <em>you</em> to design marketing flyers for your own products;
+  it does not display ads to you and collects no advertising identifiers.
 </p>
 
 <h2>Children's Privacy</h2>
@@ -223,7 +266,7 @@
 </p>
 
 <footer>
-  NVP Accounting &copy; 2025. All rights reserved. &nbsp;|&nbsp;
+  NVP Accounting &copy; 2026. All rights reserved. &nbsp;|&nbsp;
   Bundle ID: com.pintoomali.nvpaccounting &nbsp;|&nbsp;
   <a href="mailto:pintoomali1@gmail.com">Contact</a>
 </footer>
