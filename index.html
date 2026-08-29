@@ -3,61 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
   <title>NVP Accounting – Privacy Policy</title>
   <style>
-    body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.1rem; margin-top: 2rem; }
-    p, li { font-size: 0.97rem; }
-    footer { margin-top: 3rem; font-size: 0.85rem; color: #888; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      color: #1a1a2e;
+      line-height: 1.75;
+      background: #fafafa;
+    }
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 36px;
+    }
+    header h1 { font-size: 1.75rem; font-weight: 700; color: #0f172a; }
+    header p  { font-size: 0.9rem; color: #64748b; margin-top: 6px; }
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-top: 12px;
+      border: 1px solid #bbf7d0;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      padding-left: 12px;
+      border-left: 3px solid #3b82f6;
+    }
+    p, li { font-size: 0.95rem; color: #334155; }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #0f172a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f1f5f9;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+    td {
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: top;
+    }
+    a { color: #2563eb; }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
   </style>
 </head>
 <body>
 
-<h1>NVP Accounting – Privacy Policy</h1>
-<p><strong>Effective date:</strong> June 2025 &nbsp;|&nbsp; <strong>App:</strong> NVP Accounting &nbsp;|&nbsp; <strong>Bundle ID:</strong> com.nvp.accounting</p>
+<header>
+  <h1>NVP Accounting — Privacy Policy</h1>
+  <p>
+    <strong>App:</strong> NVP Accounting &nbsp;|&nbsp;
+    <strong>Bundle ID:</strong> com.nvp.accounting &nbsp;|&nbsp;
+    <strong>Platform:</strong> iOS &nbsp;|&nbsp;
+    <strong>Category:</strong> Business
+  </p>
+  <p><strong>Effective date:</strong> June 2025 &nbsp;|&nbsp; <strong>Last updated:</strong> June 2025</p>
+  <span class="badge">✓ Data Not Collected</span>
+</header>
 
-<h2>Summary</h2>
-<p>NVP Accounting does <strong>not collect, transmit, or share any personal data</strong>. All data you enter stays on your device.</p>
+<h2>Overview</h2>
+<p>
+  NVP Accounting does <strong>not collect, transmit, store remotely, or share any personal data</strong>.
+  All data you enter — accounts, transactions, journal entries, GST records, and exports — stays
+  exclusively on your device. There are no servers, no accounts, no cloud sync, and no analytics.
+</p>
 
 <h2>Data We Do Not Collect</h2>
 <ul>
-  <li>No account registration or sign-in</li>
-  <li>No names, email addresses, or contact information</li>
-  <li>No financial figures or business data leave your device</li>
-  <li>No analytics, crash reporting, or telemetry</li>
-  <li>No advertising identifiers or tracking</li>
+  <li>No account registration, email address, or sign-in credentials</li>
+  <li>No names, phone numbers, or contact information</li>
+  <li>No financial figures, business data, or transaction records</li>
+  <li>No device identifiers, advertising IDs, or fingerprints</li>
+  <li>No usage analytics, crash reports, or telemetry</li>
+  <li>No location data</li>
   <li>No third-party SDKs that collect data</li>
 </ul>
 
 <h2>Local Storage Only</h2>
-<p>All accounting records, databases, and exported files (PDF/CSV) are stored exclusively in your device's local app sandbox (<code>Documents/</code>). Nothing is uploaded to any server.</p>
+<p>
+  All accounting records and exported files (PDF/CSV) are stored in your device's sandboxed
+  <code>Documents/</code> directory. Nothing is uploaded to any server at any time.
+</p>
+
+  <h2>Network</h2>
+<p>
+  The app makes no background network requests and does not transmit any
+  user data over the internet. The only outbound connection the app may
+  make is fetching web font files (e.g. Google Fonts) when a user generates
+  a PDF from an imported HTML template that references those fonts. This
+  fetch is user-initiated, contains no personal data, and is functionally
+  identical to a browser loading a font for a web page.
+</p>
+
 
 <h2>File Access</h2>
-<p>The app reads and writes files only within its own sandboxed <code>Documents/</code> directory. It can also import a database file you explicitly select via the iOS Files picker — this file is copied locally and the original is not modified.</p>
+<p>
+  The app reads and writes files only within its own sandboxed <code>Documents/</code> directory.
+  You may optionally import an existing database file via the iOS Files picker — this file is
+  copied locally into the app sandbox and the original is not modified or transmitted.
+  Exported PDF and CSV files are saved to <code>Documents/Exports/</code> and can be shared
+  via the iOS share sheet at your discretion.
+</p>
 
-<h2>System APIs Used (Required Reasons)</h2>
-<p>The app accesses the following iOS system APIs solely for core functionality:</p>
-<ul>
-  <li><strong>File timestamps</strong> — to display file modification dates (reasons C617.1, 3B52.1)</li>
-  <li><strong>Disk space</strong> — to check available storage before writing exports (reason E174.1)</li>
-  <li><strong>UserDefaults</strong> — to store app preferences locally on-device (reason CA92.1)</li>
-</ul>
-<p>These are declared in the app's <code>PrivacyInfo.xcprivacy</code> manifest.</p>
+<h2>App Password / Authentication</h2>
+<p>
+  The app uses a locally-stored password to encrypt the on-device SQLite database (SQLCipher).
+  This password never leaves your device. It is not stored on any server and cannot be
+  recovered by us. <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code> —
+  no Export Compliance (ERN) is required.
+</p>
 
-<h2>Encryption</h2>
-<p>The app does not implement any custom encryption. The app password is a local access control mechanism only. <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code>.</p>
+<h2>System APIs Accessed (Required Reasons)</h2>
+<p>The following iOS system APIs are used solely for core app functionality and are declared in the app's <code>PrivacyInfo.xcprivacy</code> manifest:</p>
+<table>
+  <tr>
+    <th>API</th>
+    <th>Purpose</th>
+    <th>Reason Code</th>
+  </tr>
+  <tr>
+    <td>File Timestamps</td>
+    <td>Display file modification dates in the UI</td>
+    <td>C617.1, 3B52.1</td>
+  </tr>
+  <tr>
+    <td>Disk Space</td>
+    <td>Check available storage before writing exports</td>
+    <td>E174.1</td>
+  </tr>
+  <tr>
+    <td>UserDefaults</td>
+    <td>Store app preferences locally on-device</td>
+    <td>CA92.1</td>
+  </tr>
+</table>
+
+<h2>Third-Party Services</h2>
+<p>
+  NVP Accounting does not integrate any third-party analytics, advertising, crash reporting,
+  or data collection services. No data is shared with any third party.
+</p>
 
 <h2>Children's Privacy</h2>
-<p>The app is not directed at children under 13 and does not knowingly collect any information from children.</p>
+<p>
+  This app is not directed at children under 13 and does not knowingly collect any information
+  from children.
+</p>
 
 <h2>Changes to This Policy</h2>
-<p>If the privacy practices change, this page will be updated with a new effective date.</p>
+<p>
+  If privacy practices change, this page will be updated with a new effective date.
+  Continued use of the app after changes constitutes acceptance of the updated policy.
+</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:pintoomali1@gmail.com">your@email.com</a></p>
+<p>
+  For questions about this privacy policy, contact:
+  <a href="mailto:your@email.com">your@email.com</a>
+</p>
 
-<footer>NVP Accounting &copy; 2025. All rights reserved.</footer>
+<footer>
+  NVP Accounting &copy; 2025. All rights reserved. &nbsp;|&nbsp;
+  Bundle ID: com.nvp.accounting &nbsp;|&nbsp;
+  <a href="mailto:your@email.com">Contact</a>
+</footer>
 
 </body>
 </html>
